@@ -51,6 +51,7 @@ export default class TestExecutor {
 
             console.log(`${index + 1}/${testSuite.length} Test Result: ${testResult.length === 0 ? 'SUCCESS' : 'FAILED'}`);
             if (testResult.length > 0) {
+                console.log('\n');
                 console.log(`Errors: `);
                 testResult.forEach((error) => {
                     console.log(`-${error}`);

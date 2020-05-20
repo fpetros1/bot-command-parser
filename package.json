@@ -1,0 +1,25 @@
+{
+  "name": "bot-command-parser",
+  "version": "0.0.1",
+  "description": "Parser for chatbots commands",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "npx babel-node ./src/index.js ./src/index.js",
+    "test": "npx babel-node ./src/index.js --test",
+    "build": "npx webpack"
+  },
+  "keywords": [
+    "chat",
+    "bot",
+    "parser"
+  ],
+  "author": "fpetros",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0"
+  },
+  "dependencies": {}
+}

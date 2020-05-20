@@ -4,9 +4,8 @@
   "description": "Parser for chatbots commands",
   "main": "./src/index.js",
   "scripts": {
-    "start": "npx babel-node ./src/index.js ./src/index.js",
-    "test": "npx babel-node ./src/index.js --test",
-    "build": "npx webpack"
+    "start": "npx babel-node ./src/index.js",
+    "test": "npx babel-node ./src/index.js --test"
   },
   "keywords": [
     "chat",

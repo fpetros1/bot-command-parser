@@ -29,10 +29,18 @@ export const DoubleDashTestCase = () => {
         errors.push(`Parameter "thief" should be "true" but got "${result.thief}"`);
     }
 
-    const splicedParameters = parameters.join(' ');
+    result.indexToRemove.forEach(index => {
+        parameters.splice(index, 1);
+    });
 
-    if (!splicedParameters === '-str 50 -end 20 -sl 120 -heavy -tank') {
-        errors.push(`After parse, the parameters should be "-str 50 -end 20 -sl 120 -heavy -tank" but got "${splicedParameters}"`);
+    const filteredParameters = parameters.filter((value, index) => result.indexToRemove.indexOf(index) === -1);
+
+    const splicedParameters = filteredParameters.join(' ');
+
+    const validationString = '-str 50 -end 20 -sl 120 -heavy -tank';
+
+    if (!(splicedParameters === validationString)) {
+        errors.push(`After parse, the parameters should be "${validationString}" but got "${splicedParameters}"`);
     }
 
     return errors;
